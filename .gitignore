@@ -24,3 +24,8 @@ server.pid
 # ادیتورها
 .vscode/
 .idea/
+
+
+make service.txt
+nssm.exe
+script-make-service.py
