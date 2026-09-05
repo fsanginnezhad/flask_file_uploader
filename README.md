@@ -20,7 +20,7 @@ Flask · Flask-SQLAlchemy · Flask-JWT-Extended · SQLite · جاوااسکری�
 ## ساختار پروژه
 
 ```
-flask-uploader/
+flask-file-uploader/
 ├── app/
 │   ├── auth/          # لاگین
 │   ├── files/         # آپلود فایل توسط کاربر عادی
@@ -39,7 +39,7 @@ flask-uploader/
 
 ```bash
 git clone <آدرس-ریپازیتوری-شما>
-cd flask-uploader
+cd flask-file-uploader
 
 python3 -m venv venv
 source venv/bin/activate      # ویندوز: venv\Scripts\activate
