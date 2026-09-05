@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>پنل ادمین — آپلودر فایل</title>
+  <link rel="icon" href="/static/icons/icon-192.png" />
+  <link rel="stylesheet" href="/static/css/style.css" />
+</head>
+<body>
+  <div class="admin-shell">
+    <div class="admin-header">
+      <h1>پنل مدیریت</h1>
+      <button id="logout-btn" class="btn btn-ghost btn-small">خروج</button>
+    </div>
+
+    <div class="tabs">
+      <button class="tab-btn active" data-tab="users">کاربران</button>
+      <button class="tab-btn" data-tab="settings">تنظیمات پیش‌فرض</button>
+      <button class="tab-btn" data-tab="folders">پوشه‌ها</button>
+      <button class="tab-btn" data-tab="upload">آپلود</button>
+    </div>
+
+    <!-- تب کاربران -->
+    <section class="panel active" id="panel-users">
+      <div class="panel-toolbar">
+        <button id="add-user-btn" class="btn btn-primary btn-small">+ افزودن کاربر</button>
+      </div>
+
+      <div id="add-user-form" style="display:none; margin-bottom:16px;" class="settings-form">
+        <div class="field">
+          <label>نام کاربری</label>
+          <input type="text" id="new-username" />
+        </div>
+        <div class="field">
+          <label>نام نمایشی (اختیاری)</label>
+          <input type="text" id="new-display-name" placeholder="مثلاً: فرشاد رضایی" />
+        </div>
+        <div class="field">
+          <label>رمز عبور</label>
+          <input type="password" id="new-password" />
+        </div>
+        <div class="field">
+          <label><input type="checkbox" id="new-is-admin" style="width:auto; margin-inline-end:6px;" />ادمین باشد</label>
+        </div>
+        <button id="save-new-user-btn" class="btn btn-primary btn-small">ثبت کاربر</button>
+        <button id="cancel-new-user-btn" class="btn btn-ghost btn-small">انصراف</button>
+      </div>
+
+      <div class="table-scroll">
+        <table>
+          <thead>
+            <tr>
+              <th>نام کاربری</th>
+              <th>نام نمایشی</th>
+              <th>نقش</th>
+              <th>وضعیت</th>
+              <th>حداکثر حجم (MB)</th>
+              <th>فرمت‌های مجاز</th>
+              <th>عملیات</th>
+            </tr>
+          </thead>
+          <tbody id="users-tbody"></tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- تب تنظیمات سراسری -->
+    <section class="panel" id="panel-settings">
+      <div class="settings-form">
+        <div class="field">
+          <label>حداکثر حجم فایل پیش‌فرض (مگابایت)</label>
+          <input type="number" id="settings-max-size" min="1" />
+        </div>
+        <div class="field">
+          <label>فرمت‌های مجاز پیش‌فرض (با کاما جدا کنید)</label>
+          <input type="text" id="settings-extensions" placeholder="pdf,png,jpg,docx" />
+        </div>
+        <button id="save-settings-btn" class="btn btn-primary btn-small">ذخیره تنظیمات</button>
+      </div>
+    </section>
+
+    <!-- تب پوشه‌ها -->
+    <section class="panel" id="panel-folders">
+      <div class="folders-layout">
+        <ul class="folder-list" id="folder-list"></ul>
+        <div>
+          <p class="muted-note" id="folder-files-hint">یک پوشه را از فهرست انتخاب کنید</p>
+          <div class="table-scroll">
+            <table id="folder-files-table" style="display:none;">
+              <thead>
+                <tr>
+                  <th>نام فایل</th>
+                  <th>حجم</th>
+                  <th>تاریخ آپلود</th>
+                  <th>عملیات</th>
+                </tr>
+              </thead>
+              <tbody id="folder-files-tbody"></tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- تب آپلود توسط ادمین -->
+    <section class="panel" id="panel-upload">
+      <div class="settings-form">
+        <div class="field">
+          <label>آپلود برای کاربر</label>
+          <select id="admin-upload-target"></select>
+        </div>
+        <div class="field">
+          <label>فایل‌ها</label>
+          <input type="file" id="admin-upload-input" multiple />
+        </div>
+        <button id="admin-upload-btn" class="btn btn-primary btn-small">آپلود</button>
+        <div class="result-box" id="admin-upload-result"></div>
+      </div>
+    </section>
+  </div>
+
+  <script src="/static/js/common.js"></script>
+  <script src="/static/js/admin.js"></script>
+</body>
+</html>

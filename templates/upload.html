@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>آپلود فایل</title>
+  <link rel="manifest" href="/static/manifest.json" />
+  <meta name="theme-color" content="#0F6B5C" />
+  <link rel="apple-touch-icon" href="/static/icons/icon-192.png" />
+  <link rel="icon" href="/static/icons/icon-192.png" />
+  <link rel="stylesheet" href="/static/css/style.css" />
+</head>
+<body>
+  <div class="page-shell">
+    <header class="top-bar">
+      <button id="logout-btn" class="btn btn-ghost btn-small">خروج</button>
+    </header>
+
+    <main class="center-screen">
+      <div class="card">
+        <h1>آپلود فایل</h1>
+        <p class="subtitle" id="welcome-text">فایل‌های خود را انتخاب کنید</p>
+
+        <div id="error-box" class="error-box"></div>
+
+        <form id="upload-form">
+          <div class="file-picker" id="file-picker">
+            <input type="file" id="file-input" name="files" multiple />
+            <span id="file-picker-label">برای انتخاب فایل ضربه بزنید</span>
+          </div>
+
+          <ul class="file-list" id="file-list"></ul>
+          <button type="button" id="clear-files-btn" class="btn btn-ghost btn-small" style="display:none; margin-bottom:16px;">پاک کردن همه</button>
+
+          <div class="progress-track" id="progress-track">
+            <div class="progress-fill" id="progress-fill"></div>
+          </div>
+          <div class="progress-label" id="progress-label"></div>
+
+          <button type="submit" id="upload-btn" class="btn btn-primary" disabled>آپلود</button>
+        </form>
+
+        <div class="result-box" id="result-box"></div>
+      </div>
+    </main>
+  </div>
+
+  <script src="/static/js/common.js"></script>
+  <script src="/static/js/upload.js"></script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+# محیط و رمزها
+.env
+
+# دیتابیس و فایل‌های آپلودی کاربران — نباید وارد گیت بشن
+*.db
+instance/
+uploads/*
+!uploads/.gitkeep
+
+# پایتون
+__pycache__/
+*.pyc
+*.pyo
+.venv/
+venv/
+env/
+*.egg-info/
+
+# لاگ و فایل موقت
+*.log
+server.pid
+.DS_Store
+
+# ادیتورها
+.vscode/
+.idea/

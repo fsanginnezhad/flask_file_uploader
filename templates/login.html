@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>ورود — آپلودر فایل</title>
+  <link rel="manifest" href="/static/manifest.json" />
+  <meta name="theme-color" content="#0F6B5C" />
+  <link rel="apple-touch-icon" href="/static/icons/icon-192.png" />
+  <link rel="icon" href="/static/icons/icon-192.png" />
+  <link rel="stylesheet" href="/static/css/style.css" />
+</head>
+<body>
+  <div class="center-screen">
+    <div class="card">
+      <h1>ورود</h1>
+      <p class="subtitle">برای آپلود فایل وارد حساب کاربری خود شوید</p>
+
+      <div id="error-box" class="error-box"></div>
+
+      <form id="login-form">
+        <div class="field">
+          <label for="username">نام کاربری</label>
+          <input type="text" id="username" name="username" autocomplete="username" required />
+        </div>
+        <div class="field">
+          <label for="password">رمز عبور</label>
+          <input type="password" id="password" name="password" autocomplete="current-password" required />
+        </div>
+        <button type="submit" id="submit-btn" class="btn btn-primary">ورود</button>
+      </form>
+    </div>
+  </div>
+
+  <script src="/static/js/common.js"></script>
+  <script src="/static/js/login.js"></script>
+</body>
+</html>

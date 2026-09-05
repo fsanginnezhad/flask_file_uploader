@@ -1,0 +1,16 @@
+{
+  "name": "آپلودر فایل",
+  "short_name": "آپلودر",
+  "description": "آپلود فایل به سرور سازمانی",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#F7F5F2",
+  "theme_color": "#0F6B5C",
+  "dir": "rtl",
+  "lang": "fa",
+  "icons": [
+    { "src": "/static/icons/icon-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "/static/icons/icon-512.png", "sizes": "512x512", "type": "image/png" }
+  ]
+}
